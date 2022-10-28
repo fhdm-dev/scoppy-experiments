@@ -1,7 +1,7 @@
 
 # Capacitor charging and discharging - Roll Mode
 
-In this experiment we'll view in real time the change in voltage across a capacitor in an RC circuit that has a time constant of approximately 4.7 seconds. This will demonstrate the use of the oscilloscope roll mode and cursors.
+In this experiment we'll view in real time the change in voltage across a capacitor in an RC circuit that has a time constant of approximately 4.7 seconds. This will demonstrate the use of the oscilloscope roll mode and how to use cursors.
 
 ## Background reading
 https://www.allaboutcircuits.com/textbook/direct-current/chpt-16/capacitor-transient-response/    
@@ -10,7 +10,7 @@ https://www.allaboutcircuits.com/textbook/experiments/chpt-3/capacitor-charging-
 <br>
 
 ## What is Roll Mode?
-Roll mode is a method of displaying acquired waveform data without waiting for the complete waveform record. For example, if Time/Div is set to 1 second and roll mode wasn’t available, it would take 10 seconds to fill the waveform record. But using roll mode, the oscilloscope will immediately begin displaying results rather than waiting the full 10 seconds. Scoppy automatically enters roll mode when large values for Time/div are selected. When the trigger mode is set to AUTO or NORMAL the display window will be in the center of the sample record. This means that newly aquired data can take a while to become visible. By setting the trigger mode to OFF, Scoppy will display the most recent data in the sample record. This is what we want for this experiment because we want to see the voltage change across the capacitor in real time.
+Roll mode is a method of displaying acquired waveform data without waiting for the complete waveform record. For example, if Time/Div is set to 1 second and roll mode wasn’t available, it would take 10 seconds to fill the waveform record (because there are 10 horizontal divisions). But using roll mode, the oscilloscope will immediately begin displaying results rather than waiting the full 10 seconds. Scoppy automatically enters roll mode when large values for Time/div are selected. When the trigger mode is set to AUTO or NORMAL the display window will be in the center of the sample record. This means that newly aquired data can take a while to become visible. By setting the trigger mode to OFF, Scoppy will display the most recent data in the sample record. This is what we want for this experiment because we want to see the voltage change across the capacitor in real time.
 
 <br>
 
@@ -49,14 +49,14 @@ short in case there is an error in wiring up the circuit.
 ![charge and discharge](images/ss1.png)
 
 ### Prepare to measure the time constant
-* Discharge the cap until voltage is near 0
+* Discharge the cap until the voltage is near 0
 * Move the switch to the charge position
 * When the voltage is near 3.3V, tap Stop
 
 ![charge to 3.3V](images/ss2.png)
 
 ### Measure the time constant using cursors
-* Tap the MENU button (near the top-right of the screen) and tap CURSORS.
+* Scroll to the bottom of the controls on the right side of the screen and tap CURSORS.
 * Move the horizontal cursors so that one of them is at 0V and the other at approx 63% of the input voltage (3.3V * 0.63 = 2.079V). The voltage levels of the cursors can be seen at the top left of the screen.
 * Now move the vertical cursors so that one of them is at the point where the voltage begins to rise and the other so it intersects the upper cursor when that cursor intersects the voltage curve.
 * Now read the time difference of the vertical cursors. Hopefully it should equal the time constant (RC) of the circuit. You might want to zoom in horizontally and vertically to make more precise measurements.
@@ -68,4 +68,9 @@ short in case there is an error in wiring up the circuit.
 When in Run mode you'll notice that zooming horizontally (changing the Time/Div) will sometimes cause the screen to clear and then start re-drawing. This is because Scoppy automatically changes the sample rate as you zoom - and when the sample rate changes Scoppy clears the current sample record. At lower Time/Div settings this is not a problem because each screenfull of samples only takes a short amount of time to aquire. At higher Time/Div settings this can be annoying. To get around this problem you can either simply hit stop before zooming or [select a fixed sample rate](https://oscilloscope.fhdm.xyz/app-help/Sample-Rate) by tapping the sample rate at the top left of the screen.
 
 ## Links
-[Scoppy documentation](https://oscilloscope.fhdm.xyz/)
+[Scoppy Home](https://github.com/fhdm-dev/scoppy)
+<br>
+[Scoppy Documentation](https://oscilloscope.fhdm.xyz/)
+<br>
+[FHDM Store](https://store.fhdm.xyz/home) - affordable oscilloscopes for the student and maker (these use the Scoppy app and firmware)
+<br>
